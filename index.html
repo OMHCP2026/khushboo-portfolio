@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Khushboo Pal · Frontend Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khushboo Pal · Web Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -15,24 +15,19 @@
     :root {
       --bg: #f9fafb;
       --surface: #ffffff;
-      --surface-elevated: #ffffff;
       --surface-muted: #f3f4f6;
       --border: #eef2f6;
       --border-strong: #e2e8f0;
       --primary: #4f46e5;
       --primary-dark: #4338ca;
       --primary-soft: #eef2ff;
-      --primary-glow: rgba(79, 70, 229, 0.08);
       --text-main: #0f172a;
       --text-soft: #334155;
       --text-muted: #64748b;
       --accent-green: #10b981;
       --accent-green-dim: #d1fae5;
       --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
-      --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
       --shadow-hover: 0 20px 25px -12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
-      --radius-card: 1.5rem;
-      --radius-element: 1rem;
     }
 
     body {
@@ -48,7 +43,6 @@
       color: inherit;
     }
 
-    /* LAYOUT */
     .page {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -58,7 +52,7 @@
       min-height: 100vh;
     }
 
-    /* SIDEBAR */
+    /* Sidebar */
     .sidebar {
       background: var(--surface);
       border-right: 1px solid var(--border-strong);
@@ -70,7 +64,6 @@
       top: 0;
       height: 100vh;
       overflow-y: auto;
-      box-shadow: var(--shadow-sm);
     }
 
     .profile {
@@ -91,11 +84,6 @@
       color: white;
       margin: 0 auto 1rem;
       box-shadow: 0 8px 18px rgba(79, 70, 229, 0.2);
-      transition: transform 0.2s ease;
-    }
-
-    .avatar-ring:hover {
-      transform: scale(1.02);
     }
 
     .profile-name {
@@ -103,14 +91,12 @@
       font-size: 1.4rem;
       font-weight: 600;
       color: var(--text-main);
-      letter-spacing: -0.2px;
     }
 
     .profile-role {
       font-size: 0.8rem;
       color: var(--text-muted);
       margin-top: 4px;
-      font-weight: 500;
     }
 
     .avail-badge {
@@ -143,7 +129,6 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
-      margin-top: 0.5rem;
     }
 
     .sidebar-nav a {
@@ -155,23 +140,12 @@
       font-size: 0.9rem;
       font-weight: 500;
       color: var(--text-soft);
-      transition: all 0.2s ease;
+      transition: all 0.2s;
     }
 
-    .sidebar-nav a .nav-icon {
-      font-size: 1.1rem;
-      opacity: 0.7;
-    }
-
-    .sidebar-nav a:hover {
+    .sidebar-nav a:hover, .sidebar-nav a.active {
       background: var(--primary-soft);
       color: var(--primary);
-    }
-
-    .sidebar-nav a.active {
-      background: var(--primary-soft);
-      color: var(--primary);
-      font-weight: 600;
     }
 
     .sidebar-contact {
@@ -190,11 +164,6 @@
       color: var(--text-muted);
     }
 
-    .contact-item span:first-child {
-      font-size: 0.95rem;
-      width: 22px;
-    }
-
     .sidebar-socials {
       display: flex;
       gap: 10px;
@@ -204,7 +173,6 @@
     .soc-btn {
       background: var(--surface-muted);
       border: 1px solid var(--border);
-      color: var(--text-soft);
       padding: 8px 12px;
       border-radius: 40px;
       font-size: 0.75rem;
@@ -220,7 +188,7 @@
       color: var(--primary);
     }
 
-    /* MAIN CONTENT */
+    /* Main */
     .main {
       padding: 2.8rem 2.5rem;
       display: flex;
@@ -228,7 +196,6 @@
       gap: 3rem;
     }
 
-    /* HERO */
     .hero-block {
       border-bottom: 2px solid var(--border);
       padding-bottom: 2rem;
@@ -245,12 +212,11 @@
 
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
+      font-size: 3rem;
       line-height: 1.15;
       letter-spacing: -1px;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: var(--text-main);
     }
 
     .hero-title em {
@@ -269,12 +235,6 @@
       margin-bottom: 2rem;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
     .btn-primary {
       background: var(--primary);
       color: white;
@@ -282,8 +242,8 @@
       border-radius: 40px;
       font-size: 0.85rem;
       font-weight: 500;
+      display: inline-block;
       transition: all 0.25s;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     }
 
     .btn-primary:hover {
@@ -292,24 +252,6 @@
       box-shadow: 0 10px 20px -8px rgba(79, 70, 229, 0.4);
     }
 
-    .btn-outline {
-      background: transparent;
-      border: 1.5px solid var(--border-strong);
-      color: var(--text-main);
-      padding: 10px 28px;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: all 0.2s;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--primary);
-      background: var(--primary-soft);
-      color: var(--primary);
-    }
-
-    /* STAT CARDS */
     .stat-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -323,13 +265,11 @@
       padding: 1.3rem 0.8rem;
       text-align: center;
       transition: all 0.2s;
-      box-shadow: var(--shadow-sm);
     }
 
     .stat-card:hover {
       border-color: var(--primary);
       transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
     }
 
     .stat-card .num {
@@ -337,7 +277,6 @@
       font-size: 2.4rem;
       font-weight: 700;
       color: var(--primary);
-      letter-spacing: -0.5px;
     }
 
     .stat-card .lbl {
@@ -345,10 +284,8 @@
       color: var(--text-muted);
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
     }
 
-    /* sections */
     .sec {
       display: flex;
       flex-direction: column;
@@ -379,14 +316,12 @@
       white-space: nowrap;
     }
 
-    /* project card */
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 1.75rem;
       padding: 1.6rem;
       transition: all 0.25s;
-      box-shadow: var(--shadow-sm);
     }
 
     .project-card:hover {
@@ -399,32 +334,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1rem;
       flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .proj-name-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .proj-badge {
-      width: 44px;
-      height: 44px;
-      background: var(--primary-soft);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
+      margin-bottom: 1rem;
     }
 
     .proj-name {
       font-size: 1.1rem;
       font-weight: 700;
-      color: var(--text-main);
     }
 
     .proj-link-btn {
@@ -434,7 +350,6 @@
       border-radius: 40px;
       font-size: 0.75rem;
       font-weight: 500;
-      transition: all 0.2s;
     }
 
     .proj-link-btn:hover {
@@ -447,7 +362,6 @@
       font-size: 0.9rem;
       color: var(--text-soft);
       margin-bottom: 1rem;
-      line-height: 1.6;
     }
 
     .proj-points {
@@ -460,18 +374,12 @@
     .proj-points li {
       font-size: 0.85rem;
       color: var(--text-soft);
-      line-height: 1.5;
-    }
-
-    .proj-points li::marker {
-      color: var(--primary);
     }
 
     .tag-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 6px;
     }
 
     .tag {
@@ -480,11 +388,9 @@
       color: var(--text-soft);
       padding: 4px 12px;
       border-radius: 40px;
-      font-weight: 500;
       border: 1px solid var(--border);
     }
 
-    /* skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -497,28 +403,13 @@
       border-radius: 60px;
       padding: 10px 16px;
       font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-main);
       display: flex;
       align-items: center;
       gap: 12px;
-      transition: all 0.2s;
-      font-weight: 500;
-      color: var(--text-main);
     }
 
-    .skill-pill:hover {
-      border-color: var(--primary);
-      background: var(--primary-soft);
-      transform: translateX(4px);
-    }
-
-    .sk-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    /* education */
     .edu-list {
       display: flex;
       flex-direction: column;
@@ -534,18 +425,11 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      transition: all 0.2s;
-    }
-
-    .edu-card:hover {
-      border-color: var(--primary);
-      background: #fefeff;
     }
 
     .deg {
       font-weight: 700;
       font-size: 0.95rem;
-      color: var(--text-main);
     }
 
     .sch {
@@ -560,7 +444,6 @@
       color: var(--primary);
     }
 
-    /* strengths */
     .strength-grid {
       display: flex;
       flex-wrap: wrap;
@@ -574,94 +457,41 @@
       padding: 8px 18px;
       font-size: 0.85rem;
       font-weight: 500;
-      color: var(--text-soft);
-      transition: all 0.2s;
     }
 
-    .str-pill:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: var(--primary-soft);
-    }
-
-    /* contact banner */
     .contact-banner {
       background: var(--surface);
       border-radius: 2rem;
       border: 1px solid var(--border);
-      padding: 2.2rem 2rem;
+      padding: 2rem;
       text-align: center;
-      box-shadow: var(--shadow-sm);
     }
 
     .contact-banner h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
-      color: var(--text-main);
-    }
-
-    .contact-banner p {
-      color: var(--text-muted);
-      margin-bottom: 0.8rem;
-      font-size: 0.9rem;
     }
 
     .contact-info {
-      margin: 1rem 0 1.5rem;
+      margin: 1rem 0;
       font-size: 0.9rem;
     }
 
     .contact-info a {
       color: var(--primary);
       font-weight: 500;
-      border-bottom: 1px dashed var(--primary);
-    }
-
-    .contact-btns {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .cbtn {
-      background: var(--surface-muted);
-      border: 1px solid var(--border);
-      padding: 10px 22px;
-      border-radius: 40px;
-      font-weight: 500;
-      font-size: 0.85rem;
-      transition: all 0.2s;
-    }
-
-    .cbtn.primary {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: white;
-    }
-
-    .cbtn.primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    .cbtn:hover:not(.primary) {
-      border-color: var(--primary);
-      background: var(--primary-soft);
-      color: var(--primary);
     }
 
     .footer {
       text-align: center;
-      padding-top: 1rem;
       font-size: 0.7rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border);
+      padding-top: 1rem;
       margin-top: 1rem;
     }
 
-    /* responsive */
     @media (max-width: 780px) {
       .page {
         grid-template-columns: 1fr;
@@ -669,154 +499,126 @@
       .sidebar {
         position: static;
         height: auto;
-        border-right: none;
-        border-bottom: 1px solid var(--border-strong);
-        padding: 1.5rem;
-        gap: 1.2rem;
-      }
-      .sidebar-nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .sidebar-nav a {
-        padding: 6px 14px;
       }
       .hero-title {
-        font-size: 2.3rem;
+        font-size: 2rem;
       }
       .main {
-        padding: 2rem 1.5rem;
-      }
-      .stat-row {
-        gap: 0.7rem;
-      }
-      .edu-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-      .edu-grade {
-        font-size: 1.4rem;
+        padding: 1.5rem;
       }
     }
 
     @media (max-width: 480px) {
-      .hero-actions {
-        flex-direction: column;
-      }
-      .btn-primary, .btn-outline {
-        text-align: center;
-      }
       .skills-grid {
         grid-template-columns: 1fr 1fr;
       }
-    }
-
-    ::selection {
-      background: var(--primary-soft);
-      color: var(--primary);
     }
   </style>
 </head>
 <body>
 <div class="page">
-
-  <!-- SIDEBAR (updated: removed location, graduate role) -->
   <aside class="sidebar">
     <div class="profile">
       <div class="avatar-ring">KP</div>
       <div class="profile-name">Khushboo Pal</div>
-      <div class="profile-role">B.Sc IT Graduate · Frontend Developer</div>
-      <div class="avail-badge"><span class="avail-dot"></span> Open for full-time roles</div>
+      <div class="profile-role">B.Sc IT (T.Y.) · Web Developer</div>
+      <div class="avail-badge"><span class="avail-dot"></span> Open for internships / fresher roles</div>
     </div>
-
     <nav class="sidebar-nav">
-      <a href="#about" class="active"><span class="nav-icon">✨</span> About</a>
-      <a href="#projects"><span class="nav-icon">🖌️</span> Projects</a>
-      <a href="#skills"><span class="nav-icon">⚙️</span> Skills</a>
-      <a href="#education"><span class="nav-icon">📖</span> Education</a>
-      <a href="#contact"><span class="nav-icon">📬</span> Contact</a>
+      <a href="#about" class="active">✨ About</a>
+      <a href="#projects">🖌️ Projects</a>
+      <a href="#skills">⚙️ Skills</a>
+      <a href="#education">📖 Education</a>
+      <a href="#contact">📬 Contact</a>
     </nav>
-
     <div class="sidebar-contact">
       <div class="contact-item"><span>📧</span> khushboopal04806@gmail.com</div>
       <div class="contact-item"><span>📞</span> +91 9156272870</div>
-      <!-- location removed as requested -->
     </div>
-
     <div class="sidebar-socials">
       <a class="soc-btn" href="https://github.com/OMHCP2026" target="_blank">GitHub</a>
       <a class="soc-btn" href="https://linkedin.com/in/khushboo-p-5029b6315" target="_blank">LinkedIn</a>
     </div>
   </aside>
 
-  <!-- MAIN CONTENT -->
   <main class="main">
     <div class="hero-block" id="about">
       <div class="hero-greeting">Hello, I'm</div>
-      <h1 class="hero-title">Khushboo Pal<br><em>Frontend Developer</em></h1>
-      <p class="hero-desc">A motivated B.Sc IT graduate with strong knowledge of web development, database management, and networking fundamentals. Achieved 9.3 CGPA with real-world project experience — ready to contribute to innovative IT teams and grow as a developer.</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="#projects">Explore work →</a>
-        <a class="btn-outline" href="mailto:khushboopal04806@gmail.com">Get in touch</a>
-      </div>
+      <h1 class="hero-title">Khushboo Pal<br><em>Web Developer</em></h1>
+      <p class="hero-desc">A motivated B.Sc IT fresher with strong knowledge of web development, database management, and networking fundamentals. Built real-world projects using HTML5, CSS3, JavaScript, Java, and MySQL. Seeking an internship or fresher opportunity to apply technical skills and contribute to organisational growth.</p>
+      <a class="btn-primary" href="#projects">Explore work →</a>
     </div>
 
     <div class="stat-row">
-      <div class="stat-card"><div class="num">9.3</div><div class="lbl">CGPA — B.Sc IT</div></div>
-      <div class="stat-card"><div class="num">1</div><div class="lbl">Live Project</div></div>
-      <div class="stat-card"><div class="num">3+</div><div class="lbl">Core Stacks</div></div>
+      <div class="stat-card"><div class="num">9.3</div><div class="lbl">CGPA · B.Sc IT</div></div>
+      <div class="stat-card"><div class="num">2</div><div class="lbl">Live Projects</div></div>
+      <div class="stat-card"><div class="num">5+</div><div class="lbl">Technologies</div></div>
     </div>
 
-    <!-- PROJECTS -->
+    <!-- Projects section -->
     <div class="sec" id="projects">
       <div class="sec-head">
-        <div class="sec-title">Featured Project</div>
+        <div class="sec-title">Projects</div>
         <div class="sec-line"></div>
       </div>
+
+      <!-- Project 1: Mental Health Portal -->
       <div class="project-card">
         <div class="proj-header">
-          <div class="proj-name-row">
-            <div class="proj-badge">🧠</div>
-            <div class="proj-name">Online Mental Health Counseling Portal</div>
-          </div>
+          <div class="proj-name">🧠 Online Mental Health Counseling Portal</div>
           <a class="proj-link-btn" href="https://github.com/OMHCP2026/OMHCP" target="_blank">GitHub ↗</a>
         </div>
-        <p class="proj-desc">A secure web platform that bridges users, counselors, and administrators for accessible mental health support.</p>
+        <p class="proj-desc"><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, Java, MySQL</p>
         <ul class="proj-points">
-          <li>Role-based authentication (User / Counselor / Admin) with session management</li>
-          <li>Appointment booking, records dashboard, and structured data handling</li>
-          <li>Fully responsive frontend with clean UI and seamless navigation</li>
+          <li>Responsive full-stack web application for online counseling and appointment management.</li>
+          <li>Secure role-based login system for Admin, Counselor, and Patient users.</li>
+          <li>Appointment booking and management modules with database integration.</li>
+          <li>Responsive dashboards and interactive UI using HTML, CSS, JavaScript.</li>
+          <li>Backend with Java and MySQL, real-time features for smooth navigation.</li>
         </ul>
         <div class="tag-row">
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">MySQL</span>
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Java</span><span class="tag">MySQL</span>
+        </div>
+      </div>
+
+      <!-- Project 2: Portfolio Website -->
+      <div class="project-card">
+        <div class="proj-header">
+          <div class="proj-name">🌐 Personal Portfolio Website</div>
+          <a class="proj-link-btn" href="https://OMHCP2026.github.io/khushboo-portfolio" target="_blank">Live Demo ↗</a>
+        </div>
+        <p class="proj-desc"><strong>Tech Stack:</strong> HTML5, CSS3, JavaScript, GitHub Pages</p>
+        <ul class="proj-points">
+          <li>Professional portfolio to showcase projects, skills, and achievements — live via GitHub Pages.</li>
+          <li>Smooth scroll navigation, animated section transitions, dynamic content using vanilla JavaScript.</li>
+          <li>Fully responsive across mobile, tablet, desktop with custom media queries — no frameworks.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Vanilla JS</span><span class="tag">GitHub Pages</span>
         </div>
       </div>
     </div>
 
-    <!-- SKILLS -->
+    <!-- Skills -->
     <div class="sec" id="skills">
       <div class="sec-head">
-        <div class="sec-title">Tech Arsenal</div>
+        <div class="sec-title">Technical Skills</div>
         <div class="sec-line"></div>
       </div>
       <div class="skills-grid">
-        <div class="skill-pill"><span class="sk-dot" style="background:#e44d26"></span>HTML5</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#2965f1"></span>CSS3</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#f7df1e"></span>JavaScript</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#00758f"></span>MySQL</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#f05032"></span>Git & GitHub</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#0a66c2"></span>MS Office</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#3ecf8e"></span>Networking</div>
-        <div class="skill-pill"><span class="sk-dot" style="background:#4f46e5"></span>Responsive Design</div>
+        <div class="skill-pill">🟠 HTML5</div>
+        <div class="skill-pill">🔵 CSS3</div>
+        <div class="skill-pill">🟡 JavaScript</div>
+        <div class="skill-pill">☕ Java</div>
+        <div class="skill-pill">🐬 MySQL</div>
+        <div class="skill-pill">🐙 Git & GitHub</div>
+        <div class="skill-pill">📱 Responsive Web Design</div>
+        <div class="skill-pill">📊 MS Office (Word, Excel, PPT)</div>
+        <div class="skill-pill">🌐 Networking Fundamentals</div>
       </div>
     </div>
 
-    <!-- EDUCATION (updated to reflect graduate status) -->
+    <!-- Education -->
     <div class="sec" id="education">
       <div class="sec-head">
         <div class="sec-title">Education</div>
@@ -824,67 +626,56 @@
       </div>
       <div class="edu-list">
         <div class="edu-card">
-          <div class="edu-left">
-            <div class="deg">B.Sc in Information Technology (Graduate)</div>
-            <div class="sch">University of Mumbai · Distinction · CGPA: 9.3</div>
-          </div>
-          <div class="edu-grade">9.3</div>
+          <div><div class="deg">T.Y.B.Sc (Information Technology)</div><div class="sch">University of Mumbai · Expected Graduation: 2026</div></div>
+          <div class="edu-grade">CGPA: 9.3</div>
         </div>
         <div class="edu-card">
-          <div class="edu-left">
-            <div class="deg">HSC (12th Standard)</div>
-            <div class="sch">Maharashtra State Board</div>
-          </div>
+          <div><div class="deg">HSC - 12th Standard (Science)</div><div class="sch">Maharashtra State Board</div></div>
           <div class="edu-grade">62%</div>
         </div>
         <div class="edu-card">
-          <div class="edu-left">
-            <div class="deg">SSC (10th Standard)</div>
-            <div class="sch">Maharashtra State Board</div>
-          </div>
+          <div><div class="deg">SSC - 10th Standard</div><div class="sch">Maharashtra State Board</div></div>
           <div class="edu-grade">84%</div>
         </div>
       </div>
     </div>
 
-    <!-- STRENGTHS -->
+    <!-- Key Strengths & Languages -->
     <div class="sec">
       <div class="sec-head">
-        <div class="sec-title">Core Strengths</div>
+        <div class="sec-title">Key Strengths</div>
         <div class="sec-line"></div>
       </div>
       <div class="strength-grid">
         <span class="str-pill">Quick Learner</span>
         <span class="str-pill">Good Communication</span>
         <span class="str-pill">Problem Solving</span>
-        <span class="str-pill">Team Player</span>
         <span class="str-pill">Dedicated & Consistent</span>
-        <span class="str-pill">English</span>
-        <span class="str-pill">Hindi</span>
+        <span class="str-pill">Team Player</span>
       </div>
+      <div style="margin-top: 0.5rem;"><span class="str-pill">English</span> <span class="str-pill">Hindi</span></div>
     </div>
 
-    <!-- CONTACT BANNER — updated to reflect graduate & "Let's Work Together" -->
+    <!-- Contact -->
     <div class="sec" id="contact">
       <div class="sec-head">
-        <div class="sec-title">Connect</div>
+        <div class="sec-title">Get in touch</div>
         <div class="sec-line"></div>
       </div>
       <div class="contact-banner">
-        <h2>Let's Work Together</h2>
-        <p>Open for full-time opportunities & internships as a fresh graduate</p>
+        <h2>Let's work together</h2>
+        <p>Open for internships and entry-level opportunities</p>
         <div class="contact-info">
           ✉️ <a href="mailto:khushboopal04806@gmail.com">khushboopal04806@gmail.com</a> &nbsp;·&nbsp; 📞 +91 9156272870
         </div>
-        <div class="contact-btns">
-          <a class="cbtn primary" href="mailto:khushboopal04806@gmail.com">Send email →</a>
-          <a class="cbtn" href="https://linkedin.com/in/khushboo-p-5029b6315" target="_blank">LinkedIn</a>
-          <a class="cbtn" href="https://github.com/OMHCP2026" target="_blank">GitHub</a>
+        <div class="sidebar-socials" style="justify-content: center;">
+          <a class="soc-btn" href="https://github.com/OMHCP2026" target="_blank">GitHub</a>
+          <a class="soc-btn" href="https://linkedin.com/in/khushboo-p-5029b6315" target="_blank">LinkedIn</a>
         </div>
       </div>
     </div>
 
-    <div class="footer">Khushboo Pal © 2026 · B.Sc IT Graduate · Frontend Portfolio</div>
+    <div class="footer">Khushboo Pal · B.Sc IT (T.Y.) · Portfolio based on resume · 2026</div>
   </main>
 </div>
 </body>
